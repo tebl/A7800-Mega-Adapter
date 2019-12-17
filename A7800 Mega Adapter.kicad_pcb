@@ -1,12 +1,12 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.7)
 
   (general
-    (links 18)
+    (links 19)
     (no_connects 0)
-    (area 83.185 53.34 163.195001 100.330001)
+    (area 116.129999 58.979999 146.760001 90.880001)
     (thickness 1.6)
     (drawings 14)
-    (tracks 68)
+    (tracks 69)
     (zones 0)
     (modules 8)
     (nets 14)
@@ -186,7 +186,8 @@
       (net 13 PADDLE_B))
     (pad 6 thru_hole circle (at -1.385 2.84 270) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 7 FIRE))
-    (pad 7 thru_hole circle (at -4.155 2.84 270) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
+    (pad 7 thru_hole circle (at -4.155 2.84 270) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
+      (net 1 VCC))
     (pad 8 thru_hole circle (at -6.925 2.84 270) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 2 GND))
     (pad 9 thru_hole circle (at -9.695 2.84 270) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
@@ -531,6 +532,7 @@
     (effects (font (size 1.5 1.5) (thickness 0.15)))
   )
 
+  (segment (start 118.445 76.49) (end 144.445 76.49) (width 0.25) (layer F.Cu) (net 1))
   (segment (start 141.605 69.565) (end 145.765 69.565) (width 0.25) (layer F.Cu) (net 1))
   (segment (start 145.76 76.49) (end 144.445 76.49) (width 0.25) (layer B.Cu) (net 1) (tstamp 5DA628FD))
   (segment (start 146.05 76.2) (end 145.76 76.49) (width 0.25) (layer B.Cu) (net 1) (tstamp 5DA628FC))
