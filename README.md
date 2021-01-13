@@ -5,6 +5,8 @@ Let's face it, the controllers that came with the Atari 7800 is painful to use..
 
 I based this project on the FAQ over at AtariAge.com, so if the design looks like something you've seen before then that's probably the reason why. I've built it up and tested it on my Atari 7800 PAL system, seems to work pretty good with the wired 3-button controller (don't have a 6-button variant to test out with). Unfortunately it doesn't seem to work with the new wireless 8bitdo controllers, but at least I finally get to test out some of the games without my hands aching and turning intolerable after 5-minutes of game time.
 
+If you want an alternative to using a Sega Mega Drive controller, I've also created an [adapter](https://github.com/tebl/C64-JoyKEY/tree/main/adapters/Atari%207800) so that my [C64 JoyKEY](https://github.com/tebl/C64-JoyKEY)-controller can be used with the Atari 7800 system.
+
 ## Building the adapter
 One thing to note, the main PCB of the Atari 7800 isn't actually mounted flat so the controller ports are actually angled quite a bit downwards! This means that the female DSUB-9 port that goes into the Atari 7800 will have to be soldered in place at an agle, preferably as far as you can take it and still be able to solder the pins into place.
 

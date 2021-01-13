@@ -1,34 +1,49 @@
-EESchema-LIBRARY Version 2.4
+EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
-# Device_R
+# 2N3906
 #
-DEF Device_R R 0 0 N Y 1 F N
-F0 "R" 80 0 50 V V C CNN
-F1 "Device_R" 0 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
+DEF 2N3906 Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "2N3906" 200 0 50 H V L CNN
+F2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+ALIAS 2N3905
 $FPLIST
- R_*
+ TO?92*
 $ENDFPLIST
 DRAW
-S -40 -100 40 100 0 1 10 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X B 2 -200 0 225 R 50 50 1 1 I
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# atari_joystick_Atari_Joystick_Passive
+# Atari_Joystick_Passive
 #
-DEF atari_joystick_Atari_Joystick_Passive J 0 40 Y N 1 F N
+DEF Atari_Joystick_Passive J 0 40 Y N 1 F N
 F0 "J" 0 550 50 H V C CNN
-F1 "atari_joystick_Atari_Joystick_Passive" 0 -575 50 H V C CNN
+F1 "Atari_Joystick_Passive" 0 -575 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  DB*M*
 $ENDFPLIST
 DRAW
+T 0 175 -100 60 0 0 0 +5v Normal 0 L C
+T 0 175 -200 60 0 0 0 Down Normal 0 L C
+T 0 175 -300 60 0 0 0 Fire Normal 0 L C
+T 0 175 100 60 0 0 0 Ground Normal 0 L C
+T 0 175 0 60 0 0 0 Left Normal 0 L C
+T 0 175 300 60 0 0 0 Paddle~A Normal 0 L C
+T 0 175 400 60 0 0 0 Paddle~B Normal 0 L C
+T 0 175 200 60 0 0 0 Right Normal 0 L C
+T 0 175 -400 60 0 0 0 Up Normal 0 L C
 C -70 -400 30 0 1 0 F
 C -70 -200 30 0 1 0 F
 C -70 0 30 0 1 0 F
@@ -38,15 +53,6 @@ C 50 -300 30 0 1 0 F
 C 50 -100 30 0 1 0 F
 C 50 100 30 0 1 0 F
 C 50 300 30 0 1 0 F
-T 0 175 -100 60 0 0 0 +5v Normal 0 L C
-T 0 175 -200 60 0 0 0 Down Normal 0 L C
-T 0 175 -300 60 0 0 0 Fire Normal 0 L C
-T 0 175 100 60 0 0 0 Ground Normal 0 L C
-T 0 175 0 60 0 0 0 Left Normal 0 L C
-T 0 175 300 60 0 0 0 "Paddle A" Normal 0 L C
-T 0 175 400 60 0 0 0 "Paddle B" Normal 0 L C
-T 0 175 200 60 0 0 0 Right Normal 0 L C
-T 0 175 -400 60 0 0 0 Up Normal 0 L C
 P 2 0 1 0 -150 -400 -100 -400 N
 P 2 0 1 0 -150 -300 20 -300 N
 P 2 0 1 0 -150 -200 -100 -200 N
@@ -69,11 +75,11 @@ X 9 9 -300 300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power_GND
+# GND
 #
-DEF power_GND #PWR 0 0 Y Y 1 F P
+DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
+F1 "GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -82,11 +88,29 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power_VCC
+# R
 #
-DEF power_VCC #PWR 0 0 Y Y 1 F P
+DEF R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# VCC
+#
+DEF VCC #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_VCC" 0 150 50 H V C CNN
+F1 "VCC" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -96,26 +120,17 @@ X VCC 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# sega_joypad_sega_joypad
+# sega_joypad
 #
-DEF sega_joypad_sega_joypad J 0 40 Y N 1 F N
+DEF sega_joypad J 0 40 Y N 1 F N
 F0 "J" 0 550 50 H V C CNN
-F1 "sega_joypad_sega_joypad" 0 -575 50 H V C CNN
+F1 "sega_joypad" 0 -575 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  DB*M*
 $ENDFPLIST
 DRAW
-C -70 -400 30 0 1 0 F
-C -70 -200 30 0 1 0 F
-C -70 0 30 0 1 0 F
-C -70 200 30 0 1 0 F
-C -70 400 30 0 1 0 F
-C 50 -300 30 0 1 0 F
-C 50 -100 30 0 1 0 F
-C 50 100 30 0 1 0 F
-C 50 300 30 0 1 0 F
 T 0 175 400 60 0 0 0 +5v Normal 0 L C
 T 0 175 -300 60 0 0 0 "B/~A" Normal 0 L C
 T 0 175 300 60 0 0 0 "C/~START" Normal 0 L C
@@ -125,6 +140,15 @@ T 0 175 0 60 0 0 0 Left Normal 0 L C
 T 0 175 200 60 0 0 0 Right Normal 0 L C
 T 0 175 -100 60 0 0 0 SEL Normal 0 L C
 T 0 175 -400 60 0 0 0 Up Normal 0 L C
+C -70 -400 30 0 1 0 F
+C -70 -200 30 0 1 0 F
+C -70 0 30 0 1 0 F
+C -70 200 30 0 1 0 F
+C -70 400 30 0 1 0 F
+C 50 -300 30 0 1 0 F
+C 50 -100 30 0 1 0 F
+C 50 100 30 0 1 0 F
+C 50 300 30 0 1 0 F
 P 2 0 1 0 -150 -400 -100 -400 N
 P 2 0 1 0 -150 -300 20 -300 N
 P 2 0 1 0 -150 -200 -100 -200 N
@@ -144,29 +168,6 @@ X 6 6 -300 -300 150 R 50 50 1 1 P
 X 7 7 -300 -100 150 R 50 50 1 1 W
 X GND 8 -300 100 150 R 50 50 1 1 W
 X 9 9 -300 300 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# transistors_2N3906
-#
-DEF transistors_2N3906 Q 0 0 Y N 1 F N
-F0 "Q" 200 75 50 H V L CNN
-F1 "transistors_2N3906" 200 0 50 H V L CNN
-F2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" 200 -75 50 H I L CIN
-F3 "" 0 0 50 H I L CNN
-ALIAS 2N3905
-$FPLIST
- TO?92*
-$ENDFPLIST
-DRAW
-C 50 0 111 0 1 10 N
-P 2 0 1 0 25 25 100 100 N
-P 3 0 1 0 25 -25 100 -100 100 -100 N
-P 3 0 1 20 25 75 25 -75 25 -75 N
-P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
-X E 1 100 -200 100 U 50 50 1 1 P
-X B 2 -200 0 225 R 50 50 1 1 I
-X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
