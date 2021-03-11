@@ -17,7 +17,7 @@ One thing to note, the main PCB of the Atari 7800 isn't actually mounted flat so
 ![Build 002](https://github.com/tebl/A7800-Mega-Adapter/raw/master/gallery/build_002.jpg)
 ![Build 002](https://github.com/tebl/A7800-Mega-Adapter/raw/master/gallery/build_003.jpg)
 
-As can also be seen in the picture above, the metal shroud that comes mounted on the female DSUB-9 has been removed - the reason for that is that the Atari-connector is made of plastic and not metal, so keeping it on will only serve to expand the connector on the Atari-side.
+As can also be seen in the picture above, the metal shroud that comes mounted on the female DSUB-9 has been removed after soldering it into place. The male connectors on the Atari 7800 console is made out of plastic and not metal, so it no longer serves a purpose - the plastic on these have also grown brittle over the years, so reducing the strain on it will hopefully also keep it from splitting).
 
 # Schematic
 The supplied KiCad files should be sufficient as both a schematic and as a  starting point for ordering PCBs (basically you could just zip the contents of the export folder and upload that on a fabrication site), the schematic is also available in [PDF-format](https://github.com/tebl/A7800-Mega-Adapter/blob/master/export/A7800%20Mega%20Adapter.pdf) and this is what you'll need to print and work your way through this things don't work as expected after assembly.
